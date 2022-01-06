@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,html{
+        padding:0;
+        margin:0
+    }
+    body{
+        height:100vh;
+        background-image:url('./tyler-coleman-TFQBG_gFROc-unsplash.jpg');
+        background-position: center;
+        background-size:cover;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Courier New', Courier, monospace
+    }
+    input[class="output"]{
+        padding:20px;
+        outline: none;
+        border:none;
+    }
+    .password-box{
+        display:flex;
+        flex-direction: column;
+        padding:50px;
+        width:400px;
+        background-color:rgb(64, 42, 104);
+        outline: 20px solid rgba(255, 255, 255, 0.192);
+        box-shadow: 0px 0px 20px 2px black
+    }
+    .inputs-container div{
+        color:white;
+        margin-top:19px;
+        display:flex;
+        justify-content: space-between
+    }
+    input[type="number"]{
+        width:100%;
+        padding:10px;
+    }
+   button{
+       width:180px;
+       padding:15px 5px;
+       margin:auto;
+       background-color:rgb(255, 81, 0);
+       border:none;
+       border-radius:5px;
+       color:white;
+       cursor:pointer;
+       transition:0.4s all;
+       font-weight: bold;
+   }
+   button:hover{
+    background-color:rgb(212, 49, 9);
+   }
+</style>
+<body>
+    
+    <div class="password-box">
+        <input type="text" class="output" placeholder ="password">
+        <div class="inputs-container">
+            <br>
+            <br>
+            <div>
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" name="numbers" id="numbers">
+            </div>
+            <div>
+                <label for="letters">Letters</label>
+                <input type="checkbox" name="letters" id="letters">
+            </div>
+            <div>
+                <label for="special-characters">special characters</label>
+                <input type="checkbox" name="special-characters" id="special-characters">
+            </div>
+            <div>
+                <input type="number" name="length" id="length" min="5" placeholder="5" max="20">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <button class="generate">
+            Generate Password
+        </button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
